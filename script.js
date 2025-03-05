@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     tlCrawl.to(".spider-bottom", {rotate: 20, delay: 1});
     tlCrawl.to(".spider-bottom", { y: -450, duration: 5});
     tlCrawl.to(".spider-bottom", {rotate: 90, delay: 1});
-    tlCrawl.to(".spider-bottom", { x: innerWidth-520, duration:10});
-    
+    tlCrawl.to(".spider-bottom", { x: "+=210", duration: 3});
+    tlCrawl.to(".spider-bottom", {rotate: 145, delay: 1});
+    tlCrawl.to(".spider-bottom", { y: "+=200", duration: 2});
    
 });
