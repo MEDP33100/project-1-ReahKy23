@@ -29,7 +29,7 @@ h1 {
 }
 
 /* Position the images on opposite sides of the screen */
-.start_imgs {
+.spaced_imgs {
     position: relative;
     width: 100vw;
     height: 100vh;
@@ -87,8 +87,6 @@ h1 {
     border: 3px solid white;
 }
 
-
-
 .rain-overlay {
     position: fixed;
     top: 0;
@@ -119,4 +117,20 @@ h1 {
     padding: 10px 0;
     font-size: 14px;
     z-index: 100;
+}
+
+/* this is the css for the html second page */
+.spider-bottom {
+    position: fixed; 
+    bottom: 0; /* I had to tweak this because I couldn't figure out why it was at the top instead of the bottom of the scree */ 
+    right: 0; 
+    transform: rotate(-90deg); /* the spider needed to face the spout */
+    width: ; 
+    height: auto;
+    z-index: 10; /* place spider on top of spout, useful for gsap animation*/
+}
+
+.spider-bottom img{
+    width: 350px;
+    height: auto;
 }
