@@ -55,7 +55,7 @@ h1 {
 }
 
 
-.start_but {
+.next_but {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ h1 {
 
 
 /* used ai for the cursor and transistion */
-.start_but button {
+.next_but button {
     font-size: 20px;
     color: black;
     background-color: white;
@@ -81,7 +81,7 @@ h1 {
 }
 
 /* Hover effect */
-.start_but button:hover {
+.next_but button:hover {
     background-color: black;
     color: white;
     border: 3px solid white;
@@ -130,3 +130,18 @@ h1 {
     margin-right: 250px; /*had to add so that the spider would stop at the spout*/
 }
 
+#overlay2{
+    z-index: 100;
+    opacity: 0;
+}
+
+#next-page{
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-end; /* Moves button to the right */
+    height: 50vh; /* Full viewport height */
+    right: -500px;
+    bottom: 10%;
+    z-index: 100;
+    opacity: 0;
+}
