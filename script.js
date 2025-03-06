@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
             tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 5,
                 onStart: ()=> {
                     tlRain.to(".spider-bottom", {y: 500, rotate: 360, duration: 4,})
+                    tlRain.to("#next-page2", {opacity: 1});
                 },
                 onComplete: () => {
                     rainSound.currentTime = 0;
                     rainSound.play();
                 }
             });
-
             
             
             
