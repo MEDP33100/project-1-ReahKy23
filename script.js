@@ -46,15 +46,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
             // Start the animation (Fade in the rain overlay)
             tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 5,
-
+                onStart: ()=> {
+                    tlRain.to(".spider-bottom", {y: 500, duration: 3,})
+                },
                 onComplete: () => {
                     rainSound.currentTime = 0;
                     rainSound.play();
                 }
             });
             
-          
-            tlRain.to(".spider-bottom", {y: 500, duration: 1,})
+            
         });
     }
 
