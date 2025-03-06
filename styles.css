@@ -7,10 +7,17 @@ body {
     background-color: black;
 }
 
-.sun{
+.sun {
     background-image: url(../media/sun1.png);
     background-repeat: none;
-    background-size: 100vw 100vh ;
+    background-size: 100vw 100vh;
+}
+
+.reset_but {
+    opacity: 0;
+    z-index: 100;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 /* used chatgpt to debug a layering/positioning issue I had for title */
@@ -127,25 +134,32 @@ h1 {
 
 /* this is the css for the html second page */
 .spider-bottom {
-    position: fixed; 
-    bottom: 0; /* I had to tweak this because I couldn't figure out why it was at the top instead of the bottom of the scree */ 
-    right: 0; 
-    transform: rotate(-90deg); /* the spider needed to face the spout */
+    position: fixed;
+    bottom: 0;
+    /* I had to tweak this because I couldn't figure out why it was at the top instead of the bottom of the scree */
+    right: 0;
+    transform: rotate(-90deg);
+    /* the spider needed to face the spout */
     height: auto;
-    z-index: 10; /* place spider on top of spout, useful for gsap animation*/
-    margin-right: 250px; /*had to add so that the spider would stop at the spout*/
+    z-index: 10;
+    /* place spider on top of spout, useful for gsap animation*/
+    margin-right: 250px;
+    /*had to add so that the spider would stop at the spout*/
 }
 
-#overlay2{
+#overlay2 {
     z-index: 100;
     opacity: 0;
 }
 
-#next-page{
+#next-page {
     display: flex;
-    align-items: center; /* Centers vertically */
-    justify-content: flex-end; /* Moves button to the right */
-    height: 50vh; /* Full viewport height */
+    align-items: center;
+    /* Centers vertically */
+    justify-content: flex-end;
+    /* Moves button to the right */
+    height: 50vh;
+    /* Full viewport height */
     right: -500px;
     bottom: 10%;
     z-index: 100;
