@@ -7,6 +7,12 @@ body {
     background-color: black;
 }
 
+.sun{
+    background-image: url(../media/sun2.png);
+    background-repeat: none;
+    background-size: 100vw 100vh ;
+}
+
 /* used chatgpt to debug a layering/positioning issue I had for title */
 .title {
     position: absolute;
