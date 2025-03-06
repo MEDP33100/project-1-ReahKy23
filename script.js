@@ -40,20 +40,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
                     clickSound.play(); // Play sound
                 },
                 onComplete: () => {
-                    nextButton.style.display = "none";
+                    nextButton.style.display = "opcaity: 0";
                 }
             });
 
             // Start the animation (Fade in the rain overlay)
             tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 5,
                 onStart: ()=> {
-                    tlRain.to(".spider-bottom", {y: 500, duration: 3,})
+                    tlRain.to(".spider-bottom", {y: 500, rotate: 360, duration: 4,})
                 },
                 onComplete: () => {
                     rainSound.currentTime = 0;
                     rainSound.play();
                 }
             });
+
+            
             
             
         });
