@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     //I used chatpgt to help me with this code bloc (making the chirping osund play), 
     //but it is still only working some times (update: fixed it)
-    document.body.addEventListener("mouseenter", function playonce() {
+    document.body.addEventListener("mouseenter", function () {
         let birdChirp = document.getElementById("birdChirp");
         if (birdChirp) {
             birdChirp.currentTime = 0; 
