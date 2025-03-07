@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     let nextPage = document.querySelector("next-page2 button");
     let birdChirp = document.getElementById("birdChirp");
 
-    rainSound.loop = false;
+    if(rainSound){
+        rainSound.loop = false;
+    }
 
 
     if (nextButton) {
