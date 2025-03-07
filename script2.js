@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
     //I used chatpgt to help me with this code bloc (making the chirping osund play), 
-    //but it is still only working some times (update: fixed it)
-    document.body.addEventListener("mouseenter", function () {
+    //but it is still only working some times
+    document.body.addEventListener("mouseenter", function playnce() {
         let birdChirp = document.getElementById("birdChirp");
         if (birdChirp) {
             birdChirp.currentTime = 0; 
             birdChirp.play()
-            
+      
         }
     });
 
@@ -27,8 +27,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     tlClimb.to(".spider-climb", { x: "+=220", duration: 3 });
     tlClimb.to(".spider-climb", { rotate: 145, delay: 1 });
     tlClimb.to(".spider-climb", { y: "+=100", duration: 2 });
+    tlClimb.to("#last-page button", {opacity:1, ease: "power2.out"})
 
 
+    //this is for the hover sound feature of spider on opening page
     const image = document.getElementById('hoverImage');
     const audio = document.getElementById('hoverAudio');
 
