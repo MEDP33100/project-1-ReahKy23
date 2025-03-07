@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
                 onStart: () => {
                     clickSound.currentTime = 0; // Reset sound to start
                     clickSound.play(); // Play sound
+                    rainSound.play({delay:2, repeat: -1});
                 },
                 onComplete: () => {
                     nextButton.style.display = "opcaity: 0";
@@ -45,15 +46,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
             });
 
             // Start the animation (Fade in the rain overlay)
-            tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 5,
+            tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 2,
                 onStart: ()=> {
                     tlRain.to(".spider-bottom", {y: 500, rotate: 360, duration: 4,})
-                    tlRain.to("#next-page2", {opacity: 1});
+                    tlRain.to("#next-page2", {opacity: 1,});
                 },
-                onComplete: () => {
-                    rainSound.currentTime = 0;
-                    rainSound.play();
-                }
+                // onComplete: () => {
+                //     rainSound.currentTime = 0;
+                //     rainSound.play();
+                // }
             });
             
             
@@ -66,11 +67,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-tlRain.to("#spider-bottom", {y:500, duration: 4,
-    onComplete: () => {
-        birdChirp.currentTime = 0;
-        birdChirp.play();
+// tlRain.to("#spider-bottom", {y:500, duration: 4,
+//     onComplete: () => {
+//         birdChirp.currentTime = 0;
+//         birdChirp.play();
 
-    }
+//     }
     
-})
+// })
