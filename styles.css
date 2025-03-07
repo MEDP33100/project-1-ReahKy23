@@ -58,6 +58,7 @@ h1 {
 }
 
 /* Position spider_hang.png in the top right corner */
+
 .spider_hang img {
     position: absolute;
     top: -100px;
@@ -71,6 +72,16 @@ h1 {
     transform: scale(1);
 }
 
+.img-cap{
+    color:white;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20px;
+    padding-top: 100px;
+    font-variant: small-caps;
+    opacity: 0.5;
+    text-align: center;
+}
 
 
 .next_but {

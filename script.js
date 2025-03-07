@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             // Start the animation (Fade in the rain overlay)
             tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 2,
                 onStart: ()=> {
-                    tlRain.to(".spider-bottom", {y: 500, rotate: 360, duration: 4,})
+                    tlRain.to(".spider-bottom", {y: 500, rotate: 600, duration: 2,})
                     tlRain.to("#next-page2", {opacity: 1,});
                 },
             
@@ -60,33 +60,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 
-    // if(nextPage) {
-    //     nextPage.addEventListener("click", function(){
-    //          let tlClimb = gsap.timeline();
-    //          tlClimb.to(nextPage, {
-    //             onStart: () =>{
-    //                 birdChirp.currentTime = 0;
-    //                 birdChirp.play();
-    //             }
-    //          })
-    //          tlClimb.to(".spider-climb", { y: 500, duration: 5 });
-    //     })
-    // }
-
-  
-    //I want the user to press a button to stop turn off the rain 
-    // tlClimb.to("#next-page", { opacity: 1, delay: 2, duration: 5 });
 
 
 });
-
-
-
-// tlRain.to("#spider-bottom", {y:500, duration: 4,
-//     onComplete: () => {
-//         birdChirp.currentTime = 0;
-//         birdChirp.play();
-
-//     }
-    
-// })
