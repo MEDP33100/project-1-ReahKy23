@@ -28,7 +28,7 @@ h1 {
     text-align: center;
     font-variant: small-caps;
     font-family: "Ribeye";
-    font-size: 10vh;
+    font-size: 5vw;
     z-index: 100;
 }
 
@@ -43,7 +43,7 @@ h1 {
 .spout img {
     position: absolute;
     left: 100px;
-    bottom: -200px;
+    bottom: -20%;
     height: 100vh;
     z-index: 1;
 }
@@ -118,8 +118,8 @@ h1 {
 }
 
 .rain-overlay img {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
     /* Ensures it scales properly, w3schools */
     opacity: 0.5;
@@ -134,8 +134,8 @@ h1 {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 1.367vw 0;
+    font-size: 87%;
     z-index: 100;
 }
 

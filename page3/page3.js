@@ -18,39 +18,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     }
 
+    let tlClimb = gsap.timeline();
 
-    let tlClimb = gsap.timeline()
+    let screenWidth = window.innerWidth;
+    let screenHeight = window.innerHeight;
     
-    tlClimb.to("#overlay3", { opacity: 0, duration: 6, ease: "power2.out" });
-    tlClimb.to(".spider-climb", { y: -200, duration: 5 });
-    tlClimb.to(".spider-climb", { rotate: -90, duration: 2 });
-    tlClimb.to(".spider-climb", { x: -230, duration: 2 })
+    tlClimb.to("#overlay3", { opacity: 0, duration: 10, ease: "power2.out"});
+    tlClimb.to(".spider-climb", { y: () => -screenHeight * 0.2, duration: 3 });
+    tlClimb.to(".spider-climb", { rotate: -90, duration: 1 });
+    tlClimb.to(".spider-climb", { x: () => -screenWidth * 0.12, duration: 2 });
     tlClimb.to(".spider-climb", { rotate: 0, duration: 2 });
-    tlClimb.to(".spider-climb", { y: -600, duration: 5 });
+    tlClimb.to(".spider-climb", { y: () => -screenHeight * 0.65, duration: 3 });
     tlClimb.to(".spider-climb", { rotate: 90, delay: 1 });
-    tlClimb.to(".spider-climb", { x: "+=220", duration: 3 });
+    tlClimb.to(".spider-climb", { x: () => "+=" + (screenWidth * 0.15), duration: 2 });
     tlClimb.to(".spider-climb", { rotate: 145, delay: 1 });
-    tlClimb.to(".spider-climb", { y: "+=100", duration: 2 });
-    tlClimb.to("#last-page button", { opacity: 1, ease: "power2.out" })
+    tlClimb.to(".spider-climb", { y: () => "+=" + (screenHeight * 0.1), duration: 1 });
+    tlClimb.to("#last-page button", { opacity: 1, ease: "power2.out" });
 
 
-    //this is for the hover sound feature of spider on opening page
-    const image = document.getElementById('hoverImage');
-    console.log(image);
-    if (image) {
-        const audio = document.getElementById('hoverAudio');
-
-        image.addEventListener('mouseenter', () => {
-            gsap.to(image, { scale: 1.2, duration: 0.3, ease: "power2.out" });
-            // Reset audio to start
-            audio.play();
-        });
-
-        image.addEventListener('mouseleave', () => {
-            gsap.to(image, { scale: 1, duration: 0.3, ease: "power2.out" });
-        });
-
-    }
 
 
 

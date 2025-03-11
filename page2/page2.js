@@ -1,15 +1,20 @@
 document.addEventListener("DOMContentLoaded", (event) => {
     // gsap code here!
 
-    let tlCrawl = gsap.timeline()
-    tlCrawl.to(".spider-bottom", { x: 520 - innerWidth, duration: 10 });
-    tlCrawl.to(".spider-bottom", { rotate: 20, delay: 1 });
-    tlCrawl.to(".spider-bottom", { y: -450, duration: 5 });
-    tlCrawl.to(".spider-bottom", { rotate: 90, delay: 1 });
-    tlCrawl.to(".spider-bottom", { x: "+=220", duration: 3 });
-    tlCrawl.to(".spider-bottom", { rotate: 145, delay: 1 });
-    tlCrawl.to(".spider-bottom", { y: "+=150", duration: 2 });
-    tlCrawl.to("#next-page", { opacity: 1, delay: 2, duration: 5 });
+    let tlCrawl = gsap.timeline();
+
+let screenWidth = window.innerWidth;
+let screenHeight = window.innerHeight;
+
+tlCrawl.to(".spider-bottom", { x: () => 520 - screenWidth, duration: 8 });
+tlCrawl.to(".spider-bottom", { rotate: 20, delay: 1 });
+tlCrawl.to(".spider-bottom", { y: () => -screenHeight * 0.45, duration: 5 }); 
+tlCrawl.to(".spider-bottom", { rotate: 90, delay: 1 });
+tlCrawl.to(".spider-bottom", { x: () => "+=" + (screenWidth * 0.15), duration: 3 }); 
+tlCrawl.to(".spider-bottom", { rotate: 145, delay: 1 });
+tlCrawl.to(".spider-bottom", { y: () => "+=" + (screenHeight * 0.1), duration: 2 });
+tlCrawl.to("#next-page", { opacity: 1, delay: 2, duration: 5 });
+
 
     // my originnal code to try and make button start new timeline (but it wouldn't disappear after)
     // document.getElementById("next-page").addEventListener("click", function() {
@@ -51,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             // Start the animation (Fade in the rain overlay)
             tlRain.to(overlay, {opacity: 1, duration: 1,ease: "power2.out", delay: 2,
                 onStart: ()=> {
-                    tlRain.to(".spider-bottom", {y: 500, rotate: 600, duration: 2,})
+                    tlRain.to(".spider-bottom", {y: 500, rotate: 600, duration: 5,})
                     tlRain.to("#next-page2", {opacity: 1,});
                 },
             

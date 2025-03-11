@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         image.addEventListener('mouseenter', () => {
             gsap.to(image, { scale: 5.2, duration: 0.3, ease: "power2.out" });
-            // Reset audio to start
             audio.play();
         });
 
